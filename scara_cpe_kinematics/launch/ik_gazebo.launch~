@@ -1,0 +1,6 @@
+gazebo_scara_playground.launch
+Call ik_service_action_client.py
+<launch>
+	<include file="$(find scara_cpe_gazebo)/launch/gazebo_scara_playground.launch" />
+	<node name="gotoservice" pkg="scara_cpe_kinematics" type="rviz" args="-d $(find scara_cpe_gazebo)/config/sim.rviz"/>
+</launch>

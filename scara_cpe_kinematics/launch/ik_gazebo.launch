@@ -1,0 +1,4 @@
+<launch>
+	<include file="$(find scara_cpe_gazebo)/launch/gazebo_scara_playground.launch" />
+	<node name="gotoservice" pkg="scara_cpe_kinematics" type="ik_service_action_client.py"/>
+</launch>

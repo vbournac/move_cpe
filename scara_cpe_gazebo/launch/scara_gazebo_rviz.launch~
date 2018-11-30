@@ -1,0 +1,4 @@
+<launch>
+	  <include file="$(find scara_cpe_gazebo)/launch/gazebo_scara_playground.launch" />
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(scara_cpe_gazebo)/config/sim.rviz"/>
+</launch>

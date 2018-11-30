@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: scara_cpe_description
+    relative_path: urdf/scara_cpe.xacro
+  SRDF:
+    relative_path: config/scara_cpe.srdf
+  CONFIG:
+    author_name: Nicolas Clerc
+    author_email: nicolas.clerc@cpe.fr
+    generated_timestamp: 1541756928

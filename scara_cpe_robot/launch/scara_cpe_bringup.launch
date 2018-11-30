@@ -1,0 +1,11 @@
+
+<launch>
+	 <include file="$(find scara_cpe_robot)/launch/controller_manager.launch"/>   <!-- initialiser l'interface avec dynamixels -->
+	<param name="robot_description" command="$(find xacro)/xacro.py $(find scara_cpe_description)/urdf/scara_cpe.xacro" /> <!-- charge le modele urdf du robot -->
+	<node name="scara_cpe_robot" pkg="scara_cpe_robot" type="state_publisher_student.py" ></node> <!-- charge le publisher sur les dynamixels -->
+
+	<include file="$(find scara_cpe_robot)/launch/scara_meta_controller.launch"/> <!-- initialiser les 2 dynamixels -->
+        <node name="rviz" pkg="rviz" type="rviz" args="-d $(find scara_cpe_description)/config/scara_cpe.rviz"/> <!-- lance rviz -->
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+
+</launch>
